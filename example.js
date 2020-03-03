@@ -1,26 +1,26 @@
 const spa = ["created", "using", "spaghetti", "code"];
-const addSpaghettiUl = (fruits, fun) => {
+const addSpaghettiUl = (items) => {
     const ul = document.createElement('ul');           
     document.body.appendChild(ul);           
-    addLis(fruits, ul);
+    addLis(items, ul);
 }
 const callb = ["created", "using", "callback", "function"];
-const addCallbackUl = (fruits, fun) => {
+const addCallbackUl = (items, fun) => {
     const ul = document.createElement('ul');           
     document.body.appendChild(ul);
-    fun(fruits, ul);
+    fun(items, ul);
 }
 const asyn = ["created", "using", "async", "code"];
-const addAsyncUl = async (fruits) => {
+const addAsyncUl = async () => {
     const ul = document.createElement('ul');           
     await document.body.appendChild(ul);           
     return ul;
 }
 
-const addLis = (fruits, ul) => {
-    for (const f of fruits) {
+const addLis = (items, ul) => {
+    for (const i of items) {
         const li = document.createElement('li');
-        li.innerHTML = f;                
+        li.innerHTML = i;                
         ul.appendChild(li);
     };
 }
